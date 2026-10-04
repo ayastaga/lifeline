@@ -1,0 +1,59 @@
+{
+  "id": "tax_instalments",
+  "name": "Tax instalments",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/making-payments-individuals/paying-your-income-tax-instalments.html",
+  "kind": "obligation",
+  "verify": true,
+  "requires": [
+    "selfEmployed",
+    "selfEmploymentRevenueBand"
+  ],
+  "rules": [
+    {
+      "if": {
+        "selfEmployed": false
+      },
+      "then": "not_eligible",
+      "reason": "not_self_employed"
+    },
+    {
+      "if": {
+        "selfEmploymentRevenueBand": {
+          "in": [
+            "under_20k",
+            "20k_40k"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "instalments_unlikely"
+    },
+    {
+      "if": {
+        "selfEmploymentRevenueBand": {
+          "in": [
+            "40k_60k"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "instalments_possible"
+    },
+    {
+      "default": "eligible",
+      "reason": "instalments_likely"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.tax_instalments.title",
+    "action_key": "plan.tax_instalments.action",
+    "deadline": null
+  },
+  "roadmap_tier": 1
+}

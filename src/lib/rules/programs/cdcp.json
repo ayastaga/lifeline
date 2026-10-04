@@ -1,0 +1,69 @@
+{
+  "id": "cdcp",
+  "name": "Canadian Dental Care Plan",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "family",
+    "newcomer",
+    "student",
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "hasDentalInsurance",
+    "householdIncomeBand"
+  ],
+  "rules": [
+    {
+      "if": {
+        "hasDentalInsurance": true
+      },
+      "then": "not_eligible",
+      "reason": "has_dental_insurance"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "90k_plus"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "income_too_high"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "prefer_not"
+          ]
+        }
+      },
+      "then": "need_more_info",
+      "reason": "income_needed"
+    },
+    {
+      "if": {
+        "filedTaxesLastYear": false
+      },
+      "then": "likely",
+      "reason": "must_file_return"
+    },
+    {
+      "default": "eligible",
+      "reason": "apply_cdcp"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.cdcp.title",
+    "action_key": "plan.cdcp.action",
+    "deadline": null
+  },
+  "verify_note": "Plan says verify current eligibility (age groups, income limit).",
+  "roadmap_tier": 1
+}

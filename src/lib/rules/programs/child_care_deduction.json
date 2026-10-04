@@ -1,0 +1,45 @@
+{
+  "id": "child_care_deduction",
+  "name": "Child care expense deduction",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "family"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21400-child-care-expenses.html",
+  "kind": "credit",
+  "verify": true,
+  "requires": [
+    "children",
+    "paidChildcareThisYear"
+  ],
+  "rules": [
+    {
+      "if": {
+        "children": {
+          "len": 0
+        }
+      },
+      "then": "not_eligible",
+      "reason": "no_children"
+    },
+    {
+      "if": {
+        "paidChildcareThisYear": false
+      },
+      "then": "not_eligible",
+      "reason": "no_childcare_paid"
+    },
+    {
+      "default": "eligible",
+      "reason": "claim_t778"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.child_care_deduction.title",
+    "action_key": "plan.child_care_deduction.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "roadmap_tier": 2
+}

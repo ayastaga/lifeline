@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f6f7f4;
+  --color-sheet: #ffffff;
+  --color-ink: #14213d;
+  --color-muted: #586174;
+  --color-rule: #d8dce2;
+  --color-marker: #ffe94d;
+  --color-ok: #1d7a4e;
+  --color-warn: #8a5a00;
+  --font-ui: var(--font-atkinson), var(--font-deva), var(--font-guru), var(--font-arab), var(--font-sc), ui-sans-serif, system-ui, sans-serif;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); }
+body { font-family: var(--font-ui); font-size: 1.0625rem; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+
+/* Script-specific families and rhythm. */
+:lang(hi) body, :lang(hi) { font-family: var(--font-deva), var(--font-atkinson), sans-serif; line-height: 1.7; }
+:lang(pa) { font-family: var(--font-guru), var(--font-atkinson), sans-serif; line-height: 1.7; }
+:lang(ar) { font-family: var(--font-arab), var(--font-atkinson), sans-serif; line-height: 1.75; }
+:lang(ur) { font-family: var(--font-nastaliq), var(--font-arab), sans-serif; line-height: 2.15; }
+:lang(zh) { font-family: var(--font-atkinson), var(--font-sc), sans-serif; line-height: 1.7; }
+/* A message written in a different script than the UI keeps its own font. */
+.script-guru { font-family: var(--font-guru), sans-serif; }
+.script-deva { font-family: var(--font-deva), sans-serif; }
+.script-arab { font-family: var(--font-arab), sans-serif; }
+.script-hans { font-family: var(--font-sc), sans-serif; }
+
+/* The marker: the single loud element. Money and things awaiting confirmation. */
+.marker {
+  background-image: linear-gradient(transparent 12%, var(--color-marker) 12%, var(--color-marker) 88%, transparent 88%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-inline: 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .marker-draw { background-size: 0% 100%; animation: draw 700ms 150ms cubic-bezier(.2,.7,.2,1) forwards; }
+  [dir="rtl"] .marker-draw { background-position: right; }
+  @keyframes draw { to { background-size: 100% 100%; } }
+}
+
+:focus-visible { outline: 3px solid var(--color-ink); outline-offset: 2px; border-radius: 4px; }
+::selection { background: var(--color-marker); }
+
+/* English fallback text inside another language's page keeps Latin type and rhythm. */
+[lang="en"] { font-family: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif; line-height: 1.55; }

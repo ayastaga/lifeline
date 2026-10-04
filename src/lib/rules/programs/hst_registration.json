@@ -1,0 +1,56 @@
+{
+  "id": "hst_registration",
+  "name": "GST/HST registration for self-employed",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/when-register-charge.html",
+  "kind": "obligation",
+  "verify": true,
+  "requires": [
+    "selfEmployed",
+    "selfEmploymentRevenueBand"
+  ],
+  "rules": [
+    {
+      "if": {
+        "selfEmployed": false
+      },
+      "then": "not_eligible",
+      "reason": "not_self_employed"
+    },
+    {
+      "if": {
+        "rideshareDriver": true
+      },
+      "then": "eligible",
+      "reason": "rideshare_must_register"
+    },
+    {
+      "if": {
+        "selfEmploymentRevenueBand": {
+          "in": [
+            "under_20k"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "below_small_supplier_threshold"
+    },
+    {
+      "default": "need_more_info",
+      "reason": "check_12_month_revenue_with_calculator"
+    }
+  ],
+  "fact_keys": [
+    "hst_small_supplier_threshold"
+  ],
+  "plan_item": {
+    "title_key": "plan.hst_registration.title",
+    "action_key": "plan.hst_registration.action",
+    "deadline": null
+  },
+  "roadmap_tier": 1
+}

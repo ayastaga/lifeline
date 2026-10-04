@@ -1,0 +1,69 @@
+{
+  "id": "fhsa",
+  "name": "First Home Savings Account (FHSA)",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+  "kind": "account",
+  "verify": true,
+  "roadmap_tier": 3,
+  "requires": [
+    "age",
+    "firstTimeHomeBuyer"
+  ],
+  "rules": [
+    {
+      "if": {
+        "age": {
+          "lt": 18
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "age": {
+          "gt": 71
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "firstTimeHomeBuyer": false
+      },
+      "then": "not_eligible",
+      "reason": "not_first_time_buyer"
+    },
+    {
+      "if": {
+        "hasFhsa": true
+      },
+      "then": "eligible",
+      "reason": "fhsa_open_room_check"
+    },
+    {
+      "default": "eligible",
+      "reason": "fhsa_room_starts_when_opened"
+    }
+  ],
+  "fact_keys": [
+    "fhsa_annual_limit",
+    "fhsa_lifetime_limit",
+    "fhsa_carry_forward_max",
+    "fhsa_room_starts_when_opened",
+    "fhsa_first_time_buyer_lookback_years",
+    "fhsa_min_age",
+    "fhsa_max_age"
+  ],
+  "calculator": "fhsa_room",
+  "plan_item": {
+    "title_key": "plan.fhsa.title",
+    "action_key": "plan.fhsa.action",
+    "deadline": null
+  },
+  "verify_note": "Limits from Finance Canada design page; age bounds from a tier-2 page. Confirm on the CRA FHSA page."
+}

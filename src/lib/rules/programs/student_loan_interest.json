@@ -1,0 +1,37 @@
+{
+  "id": "student_loan_interest",
+  "name": "Interest paid on student loans credit",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "student"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31900-interest-paid-on-your-student-loans.html",
+  "kind": "credit",
+  "verify": true,
+  "requires": [
+    "paidStudentLoanInterest"
+  ],
+  "rules": [
+    {
+      "if": {
+        "paidStudentLoanInterest": false
+      },
+      "then": "not_eligible",
+      "reason": "no_student_loan_interest"
+    },
+    {
+      "default": "eligible",
+      "reason": "claim_line_31900"
+    }
+  ],
+  "fact_keys": [
+    "fed_lowest_rate"
+  ],
+  "plan_item": {
+    "title_key": "plan.student_loan_interest.title",
+    "action_key": "plan.student_loan_interest.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "roadmap_tier": 2
+}

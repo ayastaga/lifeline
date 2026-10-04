@@ -1,0 +1,44 @@
+{
+  "name": "lifeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:golden": "vitest run tests/golden",
+    "seed:facts": "tsx scripts/seed-facts.ts",
+    "seed:programs": "tsx scripts/seed-programs.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "check:verify": "tsx scripts/check-verify.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.48.0",
+    "cheerio": "^1.0.0",
+    "next": "^16.3.8",
+    "openai": "^4.77.0",
+    "papaparse": "^5.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "@types/papaparse": "^5.3.15",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "dotenv": "^16.4.7",
+    "supabase": "^2.0.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

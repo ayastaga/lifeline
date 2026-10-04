@@ -1,0 +1,83 @@
+{
+  "id": "clb",
+  "name": "Canada Learning Bond",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "family",
+    "newcomer"
+  ],
+  "apply_url": "https://www.canada.ca/en/services/benefits/education/education-savings/learning-bond.html",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "children",
+    "householdIncomeBand"
+  ],
+  "rules": [
+    {
+      "if": {
+        "children": {
+          "none": {
+            "age": {
+              "lt": 18
+            }
+          }
+        }
+      },
+      "then": "not_eligible",
+      "reason": "children_over_17"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "under_20k",
+            "20k_40k"
+          ]
+        }
+      },
+      "then": "eligible",
+      "reason": "low_income_clb"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "40k_60k"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "depends_on_income_and_family_size"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "prefer_not"
+          ]
+        }
+      },
+      "then": "need_more_info",
+      "reason": "income_needed"
+    },
+    {
+      "default": "not_eligible",
+      "reason": "income_too_high"
+    }
+  ],
+  "fact_keys": [
+    "clb_first_payment",
+    "clb_annual_payment",
+    "clb_lifetime_max"
+  ],
+  "plan_item": {
+    "title_key": "plan.clb.title",
+    "action_key": "plan.clb.action",
+    "deadline": null
+  },
+  "estimate": "clb",
+  "verify_note": "CLB also requires the child born in 2004 or later; income limit depends on family size.",
+  "roadmap_tier": 2
+}

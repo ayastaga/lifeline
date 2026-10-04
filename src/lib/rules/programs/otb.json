@@ -1,0 +1,91 @@
+{
+  "id": "otb",
+  "name": "Ontario Trillium Benefit",
+  "level": "provincial",
+  "jurisdiction": "ON",
+  "personas": [
+    "student",
+    "newcomer",
+    "family",
+    "gig"
+  ],
+  "apply_url": "https://www.ontario.ca/page/ontario-trillium-benefit",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "province",
+    "age",
+    "incomeBand",
+    "filedTaxesLastYear",
+    "housing"
+  ],
+  "rules": [
+    {
+      "if": {
+        "province": {
+          "ne": "ON"
+        }
+      },
+      "then": "not_eligible",
+      "reason": "not_ontario_resident"
+    },
+    {
+      "if": {
+        "age": {
+          "lt": 18
+        },
+        "children": {
+          "len": 0
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "incomeBand": {
+          "in": [
+            "90k_plus"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "income_too_high"
+    },
+    {
+      "if": {
+        "filedTaxesLastYear": false
+      },
+      "then": "likely",
+      "reason": "must_file_return"
+    },
+    {
+      "if": {
+        "housing": {
+          "in": [
+            "rent",
+            "own"
+          ]
+        }
+      },
+      "then": "eligible",
+      "reason": "pays_rent_or_property_tax"
+    },
+    {
+      "default": "likely",
+      "reason": "sales_tax_credit_only"
+    }
+  ],
+  "fact_keys": [
+    "ostc_max",
+    "oeptc_rent_occupancy_share",
+    "oeptc_max_18_to_64"
+  ],
+  "plan_item": {
+    "title_key": "plan.otb.title",
+    "action_key": "plan.otb.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "estimate": "ostc",
+  "roadmap_tier": 1
+}

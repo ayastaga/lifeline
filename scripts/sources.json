@@ -1,0 +1,164 @@
+{
+  "allowlist_domains": [
+    "www.canada.ca",
+    "www.ontario.ca"
+  ],
+  "note": "Curated allowlist. 2026-10-03: ontario.ca URLs return 200; canada.ca returned 503 to every request from a datacenter IP (bot protection), so canada.ca URLs are unverified from there. Run `npm run ingest` from a residential connection and fix any 404s.",
+  "sources": [
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit.html",
+      "program_id": "gst_hst_credit",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/who-eligible.html",
+      "program_id": "gst_hst_credit",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/how-much.html",
+      "program_id": "gst_hst_credit",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/get-benefit.html",
+      "program_id": "gst_hst_credit",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-epicerie-besoins-essentiels.html",
+      "program_id": "gst_hst_credit",
+      "language": "fr"
+    },
+    {
+      "url": "https://www.ontario.ca/page/ontario-trillium-benefit",
+      "program_id": "otb",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-workers-benefit.html",
+      "program_id": "cwb",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html",
+      "program_id": "ccb",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-before-you-apply.html",
+      "program_id": "ccb",
+      "language": "en"
+    },
+    {
+      "url": "https://www.ontario.ca/page/ontario-child-benefit",
+      "program_id": "ocb",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/benefits/education/education-savings.html",
+      "program_id": "resp_cesg",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+      "program_id": "resp_cesg",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-education-savings-plans-resps/canada-education-savings-programs-cesp/canada-education-savings-grant-cesg.html",
+      "program_id": "resp_cesg",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/benefits/education/education-savings/learning-bond.html",
+      "program_id": "clb",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-21400-child-care-expenses.html",
+      "program_id": "child_care_deduction",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html",
+      "program_id": "cdcp",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/qualify.html",
+      "program_id": "cdcp",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/newcomers-canada-immigrants.html",
+      "program_id": "first_tax_return",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/filing-deadline.html",
+      "program_id": "first_tax_return",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/employment-social-development/services/sin.html",
+      "program_id": "sin_credit_building",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-32300-your-tuition-education-textbook-amounts.html",
+      "program_id": "tuition_credit",
+      "language": "en"
+    },
+    {
+      "url": "https://www.ontario.ca/page/osap-ontario-student-assistance-program",
+      "program_id": "osap",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-training-credit.html",
+      "program_id": "canada_training_credit",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31900-interest-paid-on-your-student-loans.html",
+      "program_id": "student_loan_interest",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/when-register-charge.html",
+      "program_id": "hst_registration",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/gst-hst-businesses-taxi-limousine-ride-sharing.html",
+      "program_id": "hst_registration",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html",
+      "program_id": "cpp_self_employed",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/making-payments-individuals/paying-your-income-tax-instalments.html",
+      "program_id": "tax_instalments",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses.html",
+      "program_id": "home_vehicle_expenses",
+      "language": "en"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/benefits/ei/ei-self-employed-workers.html",
+      "program_id": "ei_self_employed",
+      "language": "en"
+    }
+  ],
+  "crawl": {
+    "rate_limit_ms": 2000,
+    "respect_robots": true,
+    "cache_days": 7
+  }
+}

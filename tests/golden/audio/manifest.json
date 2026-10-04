@@ -1,0 +1,11 @@
+{
+  "note": "Recorded questions from real speakers. Put audio files next to this manifest (not committed if participants didn't consent to publishing). Each case names the facts that MUST survive transcription exactly: misheard years, ages and amounts are the failure that matters.",
+  "cases": [
+    { "id": "hi-arrival-01", "file": "hi-arrival-01.m4a", "language": "hi", "speaker": "native, Delhi, phone mic, kitchen noise",
+      "says": "मैं 2024 में कनाडा आया था और मेरी उम्र 34 साल है", "must_contain": ["2024", "34"], "must_contain_terms": [] },
+    { "id": "pa-resp-01", "file": "pa-resp-01.m4a", "language": "pa", "speaker": "native, Punjab, phone mic",
+      "says": "ਮੇਰੇ ਦੋ ਬੱਚੇ ਹਨ, ਛੇ ਅਤੇ ਤਿੰਨ ਸਾਲ ਦੇ, RESP ਨਹੀਂ ਖੋਲ੍ਹਿਆ", "must_contain": [], "must_contain_terms": ["RESP"] },
+    { "id": "hi-codemix-01", "file": "hi-codemix-01.m4a", "language": "hi", "speaker": "native, Hinglish",
+      "says": "mera TFSA room kitna hai, maine abhi tak koi contribution nahi kiya", "must_contain": [], "must_contain_terms": ["TFSA"] }
+  ]
+}

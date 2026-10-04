@@ -1,0 +1,98 @@
+{
+  "id": "ocb",
+  "name": "Ontario Child Benefit",
+  "level": "provincial",
+  "jurisdiction": "ON",
+  "personas": [
+    "family",
+    "newcomer"
+  ],
+  "apply_url": "https://www.ontario.ca/page/ontario-child-benefit",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "children",
+    "province"
+  ],
+  "rules": [
+    {
+      "if": {
+        "province": {
+          "ne": "ON"
+        }
+      },
+      "then": "not_eligible",
+      "reason": "not_ontario_resident"
+    },
+    {
+      "if": {
+        "children": {
+          "len": 0
+        }
+      },
+      "then": "not_eligible",
+      "reason": "no_children"
+    },
+    {
+      "if": {
+        "children": {
+          "none": {
+            "age": {
+              "lt": 18
+            }
+          }
+        }
+      },
+      "then": "not_eligible",
+      "reason": "children_over_17"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "refugee_claimant"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "refugee_claimant_not_yet"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "60k_90k",
+            "90k_plus"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "income_too_high"
+    },
+    {
+      "if": {
+        "householdIncomeBand": {
+          "in": [
+            "40k_60k"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "depends_on_family_income"
+    },
+    {
+      "default": "eligible",
+      "reason": "paid_with_ccb"
+    }
+  ],
+  "fact_keys": [
+    "ocb_max_monthly_per_child"
+  ],
+  "plan_item": {
+    "title_key": "plan.ocb.title",
+    "action_key": "plan.ocb.action",
+    "deadline": null
+  },
+  "estimate": "ocb",
+  "roadmap_tier": 1
+}

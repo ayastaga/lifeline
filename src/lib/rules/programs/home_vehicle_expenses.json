@@ -1,0 +1,35 @@
+{
+  "id": "home_vehicle_expenses",
+  "name": "Business-use-of-home and vehicle expenses",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses.html",
+  "kind": "info",
+  "verify": true,
+  "requires": [
+    "selfEmployed"
+  ],
+  "rules": [
+    {
+      "if": {
+        "selfEmployed": false
+      },
+      "then": "not_eligible",
+      "reason": "not_self_employed"
+    },
+    {
+      "default": "eligible",
+      "reason": "informational"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.home_vehicle_expenses.title",
+    "action_key": "plan.home_vehicle_expenses.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "roadmap_tier": 4
+}

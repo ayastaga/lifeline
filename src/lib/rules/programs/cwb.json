@@ -1,0 +1,101 @@
+{
+  "id": "cwb",
+  "name": "Canada Workers Benefit",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "student",
+    "newcomer",
+    "family",
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-workers-benefit.html",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "age",
+    "hasEmploymentIncome",
+    "incomeBand"
+  ],
+  "rules": [
+    {
+      "if": {
+        "hasEmploymentIncome": false,
+        "selfEmployed": {
+          "ne": true
+        }
+      },
+      "then": "not_eligible",
+      "reason": "no_working_income"
+    },
+    {
+      "if": {
+        "age": {
+          "lt": 19
+        },
+        "children": {
+          "len": 0
+        },
+        "maritalStatus": {
+          "in": [
+            "single"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "incomeBand": {
+          "in": [
+            "60k_90k",
+            "90k_plus"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "income_too_high"
+    },
+    {
+      "if": {
+        "isStudent": true
+      },
+      "then": "likely",
+      "reason": "full_time_student_exclusion_may_apply"
+    },
+    {
+      "if": {
+        "incomeBand": {
+          "in": [
+            "40k_60k"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "depends_on_family_income"
+    },
+    {
+      "if": {
+        "filedTaxesLastYear": false
+      },
+      "then": "likely",
+      "reason": "must_file_return"
+    },
+    {
+      "default": "eligible",
+      "reason": "low_income_worker"
+    }
+  ],
+  "fact_keys": [
+    "cwb_max_single",
+    "cwb_max_family"
+  ],
+  "plan_item": {
+    "title_key": "plan.cwb.title",
+    "action_key": "plan.cwb.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "estimate": "cwb",
+  "roadmap_tier": 1
+}

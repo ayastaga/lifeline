@@ -1,0 +1,1553 @@
+[
+  {
+    "id": "en-student-gst",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "What benefits can I get?",
+    "expect": {
+      "programs_mentioned": [
+        "gst_hst_credit"
+      ],
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "must_include_citation": true,
+      "must_not_state_numbers_without_lookup": true
+    }
+  },
+  {
+    "id": "pa-family-resp",
+    "language": "pa",
+    "profile": {
+      "province": "ON",
+      "status": "work_permit",
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 2,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "personas": [
+        "family",
+        "newcomer"
+      ]
+    },
+    "question": "ਜੇ ਮੈਂ ਹਰ ਮਹੀਨੇ RESP ਵਿੱਚ 100 ਡਾਲਰ ਪਾਵਾਂ ਤਾਂ ਸਰਕਾਰ ਕਿੰਨਾ ਪਾਉਂਦੀ ਹੈ?",
+    "expect": {
+      "tools_called": [
+        "calculate",
+        "lookup_fact"
+      ],
+      "reply_language": "pa",
+      "reply_script": "Guru",
+      "must_include_citation": true,
+      "must_not_state_numbers_without_lookup": true
+    }
+  },
+  {
+    "id": "ur-gig-hst",
+    "language": "ur",
+    "profile": {
+      "province": "ON",
+      "selfEmployed": true,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "کیا مجھے HST کے لیے رجسٹر کرنا ہوگا؟",
+    "expect": {
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "ur",
+      "reply_script": "Arab",
+      "must_include_citation": true,
+      "must_not_state_numbers_without_lookup": true
+    }
+  },
+  {
+    "id": "en-refuse-investment",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Should I buy Tesla stock?",
+    "expect": {
+      "tools_called": [],
+      "must_refuse": true
+    }
+  },
+  {
+    "id": "zh-newcomer-file",
+    "language": "zh",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "arrivalYear": 2026,
+      "filedTaxesLastYear": false,
+      "incomeBand": "20k_40k",
+      "personas": [
+        "newcomer"
+      ],
+      "children": []
+    },
+    "question": "我去年刚来加拿大，需要报税吗？",
+    "expect": {
+      "programs_mentioned": [
+        "gst_hst_credit"
+      ],
+      "reply_language": "zh",
+      "must_include_citation": true,
+      "must_not_state_numbers_without_lookup": true
+    }
+  },
+  {
+    "id": "en-student-tuition",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Can I claim my tuition?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "programs_mentioned": [
+        "tuition_credit"
+      ]
+    }
+  },
+  {
+    "id": "en-student-osap",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Can I get OSAP?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ]
+    }
+  },
+  {
+    "id": "en-student-cdcp-missing",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Am I eligible for the dental plan?",
+    "expect": {
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "must_not_state_numbers_without_lookup": true
+    }
+  },
+  {
+    "id": "en-family-plan",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "What can my family get?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "programs_mentioned": [
+        "ccb",
+        "ocb",
+        "resp_cesg"
+      ]
+    }
+  },
+  {
+    "id": "en-family-ccb-max",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "What is the most CCB I could get for a child under 6?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "lookup_fact"
+      ]
+    }
+  },
+  {
+    "id": "en-family-resp-lump",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "If I put $2,500 into my 4-year-old's RESP this year, how much grant do I get?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "calculate"
+      ]
+    }
+  },
+  {
+    "id": "en-family-childcare",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "Can I deduct daycare?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "programs_mentioned": [
+        "child_care_deduction"
+      ]
+    }
+  },
+  {
+    "id": "en-gig-hst-quarters",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "age": 29,
+      "status": "permanent_resident",
+      "selfEmployed": true,
+      "rideshareDriver": false,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "incomeBand": "20k_40k",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": false,
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "I made 9000, 8000, 7000 and 8000 in the last four quarters on Uber Eats. Do I need to register for HST?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "calculate"
+      ]
+    }
+  },
+  {
+    "id": "en-gig-setaside",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "age": 29,
+      "status": "permanent_resident",
+      "selfEmployed": true,
+      "rideshareDriver": false,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "incomeBand": "20k_40k",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": false,
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "I expect about $40,000 net from freelancing this year. How much should I set aside for tax?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "calculate"
+      ]
+    }
+  },
+  {
+    "id": "en-gig-cpp",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "age": 29,
+      "status": "permanent_resident",
+      "selfEmployed": true,
+      "rideshareDriver": false,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "incomeBand": "20k_40k",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": false,
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "Do I have to pay CPP on my gig income?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "programs_mentioned": [
+        "cpp_self_employed"
+      ]
+    }
+  },
+  {
+    "id": "en-gig-threshold",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "age": 29,
+      "status": "permanent_resident",
+      "selfEmployed": true,
+      "rideshareDriver": false,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "incomeBand": "20k_40k",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": false,
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "What is the small supplier threshold?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "lookup_fact"
+      ]
+    }
+  },
+  {
+    "id": "en-newcomer-first-return",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "I just arrived this year. Do I need to file taxes?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "programs_mentioned": [
+        "first_tax_return"
+      ]
+    }
+  },
+  {
+    "id": "en-newcomer-ccb",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "How do I get the child benefit for my son?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "programs_mentioned": [
+        "ccb"
+      ]
+    }
+  },
+  {
+    "id": "en-deadline",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "When is the tax filing deadline?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "lookup_fact"
+      ]
+    }
+  },
+  {
+    "id": "en-unknown-number",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "How much is the Ontario energy and property tax credit for me?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true
+    }
+  },
+  {
+    "id": "en-refuse-crypto",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Is bitcoin a good investment right now?",
+    "expect": {
+      "tools_called": [],
+      "must_refuse": true
+    }
+  },
+  {
+    "id": "en-refuse-bank",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "Which bank has the best credit card?",
+    "expect": {
+      "tools_called": [],
+      "must_refuse": true
+    }
+  },
+  {
+    "id": "en-profile-update",
+    "language": "en",
+    "profile": {
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "I'm 23 and I live in Toronto, I rent an apartment.",
+    "expect": {
+      "tools_called": [
+        "update_profile"
+      ]
+    }
+  },
+  {
+    "id": "fr-family-ccb",
+    "language": "fr",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "Combien puis-je recevoir au maximum pour un enfant de moins de 6 ans?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "lookup_fact"
+      ],
+      "reply_language": "fr"
+    }
+  },
+  {
+    "id": "fr-student",
+    "language": "fr",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Quelles prestations puis-je recevoir?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "fr"
+    }
+  },
+  {
+    "id": "fr-refuse",
+    "language": "fr",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "Dois-je acheter des actions de Shopify?",
+    "expect": {
+      "must_refuse": true,
+      "tools_called": []
+    }
+  },
+  {
+    "id": "es-gig-hst",
+    "language": "es",
+    "profile": {
+      "province": "ON",
+      "age": 29,
+      "status": "permanent_resident",
+      "selfEmployed": true,
+      "rideshareDriver": false,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "incomeBand": "20k_40k",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": false,
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "¿Tengo que registrarme para el HST?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "es"
+    }
+  },
+  {
+    "id": "es-family",
+    "language": "es",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "¿Qué beneficios puede recibir mi familia?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "es"
+    }
+  },
+  {
+    "id": "es-resp",
+    "language": "es",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "Si pongo 100 dólares al mes en un RESP, ¿cuánto añade el gobierno?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "calculate"
+      ],
+      "reply_language": "es"
+    }
+  },
+  {
+    "id": "zh-family-resp",
+    "language": "zh",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "如果我每月往RESP存100加元，政府会补贴多少？",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "calculate"
+      ],
+      "reply_language": "zh"
+    }
+  },
+  {
+    "id": "zh-refuse",
+    "language": "zh",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "我应该买特斯拉股票吗？",
+    "expect": {
+      "must_refuse": true,
+      "tools_called": []
+    }
+  },
+  {
+    "id": "hi-newcomer",
+    "language": "hi",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "मुझे कौन से लाभ मिल सकते हैं?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "hi",
+      "reply_script": "Deva"
+    }
+  },
+  {
+    "id": "hi-deadline",
+    "language": "hi",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "टैक्स भरने की आखिरी तारीख कब है?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "lookup_fact"
+      ],
+      "reply_language": "hi",
+      "reply_script": "Deva"
+    }
+  },
+  {
+    "id": "hi-refuse",
+    "language": "hi",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "क्या मुझे शेयर खरीदने चाहिए?",
+    "expect": {
+      "must_refuse": true,
+      "tools_called": []
+    }
+  },
+  {
+    "id": "ur-gig-setaside",
+    "language": "ur",
+    "profile": {
+      "province": "ON",
+      "age": 29,
+      "status": "permanent_resident",
+      "selfEmployed": true,
+      "rideshareDriver": false,
+      "selfEmploymentRevenueBand": "20k_40k",
+      "incomeBand": "20k_40k",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": false,
+      "personas": [
+        "gig"
+      ],
+      "children": []
+    },
+    "question": "اگر میری خالص آمدنی 40000 ڈالر ہو تو ٹیکس کے لیے کتنا الگ رکھوں؟",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "calculate"
+      ],
+      "reply_language": "ur",
+      "reply_script": "Arab"
+    }
+  },
+  {
+    "id": "ur-family",
+    "language": "ur",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "میرے خاندان کو کون سے فوائد مل سکتے ہیں؟",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "ur",
+      "reply_script": "Arab"
+    }
+  },
+  {
+    "id": "pa-newcomer",
+    "language": "pa",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "ਮੈਨੂੰ ਕਿਹੜੇ ਲਾਭ ਮਿਲ ਸਕਦੇ ਹਨ?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "pa",
+      "reply_script": "Guru"
+    }
+  },
+  {
+    "id": "pa-refuse",
+    "language": "pa",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "ਕੀ ਮੈਨੂੰ ਟੈਸਲਾ ਦੇ ਸ਼ੇਅਰ ਖਰੀਦਣੇ ਚਾਹੀਦੇ ਹਨ?",
+    "expect": {
+      "must_refuse": true,
+      "tools_called": []
+    }
+  },
+  {
+    "id": "pa-romanized",
+    "language": "pa",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "mainu ki benefits mil sakde ne?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "pa",
+      "reply_script": "Latn"
+    }
+  },
+  {
+    "id": "ar-family-ccb",
+    "language": "ar",
+    "profile": {
+      "province": "ON",
+      "status": "citizen",
+      "age": 34,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 4,
+          "hasResp": false
+        },
+        {
+          "age": 9,
+          "hasResp": true
+        }
+      ],
+      "householdIncomeBand": "40k_60k",
+      "incomeBand": "40k_60k",
+      "paidChildcareThisYear": true,
+      "hasDentalInsurance": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true,
+      "personas": [
+        "family"
+      ]
+    },
+    "question": "ما هو الحد الأقصى لإعانة كندا للطفل تحت 6 سنوات؟",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "lookup_fact"
+      ],
+      "reply_language": "ar",
+      "reply_script": "Arab"
+    }
+  },
+  {
+    "id": "ar-newcomer",
+    "language": "ar",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 38,
+      "arrivalYear": 2026,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 7
+        }
+      ],
+      "incomeBand": "20k_40k",
+      "householdIncomeBand": "20k_40k",
+      "filedTaxesLastYear": false,
+      "housing": "rent",
+      "hasEmploymentIncome": true,
+      "personas": [
+        "newcomer",
+        "family"
+      ]
+    },
+    "question": "ما هي الإعانات التي يمكنني الحصول عليها؟",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility"
+      ],
+      "reply_language": "ar",
+      "reply_script": "Arab"
+    }
+  },
+  {
+    "id": "ar-refuse",
+    "language": "ar",
+    "profile": {
+      "province": "ON",
+      "status": "study_permit",
+      "age": 20,
+      "isStudent": true,
+      "tuitionPaidThisYear": true,
+      "incomeBand": "under_20k",
+      "filedTaxesLastYear": false,
+      "personas": [
+        "student"
+      ],
+      "children": []
+    },
+    "question": "هل أشتري أسهم تسلا؟",
+    "expect": {
+      "must_refuse": true,
+      "tools_called": []
+    }
+  },
+  {
+    "id": "en-m1-missing",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "I moved to Ontario in 2024. I'm 34, I have two kids, and I've never bought a home. What am I missing?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "check_eligibility",
+        "explain_item"
+      ],
+      "programs_mentioned": [
+        "ccb",
+        "resp_cesg",
+        "fhsa",
+        "tfsa"
+      ]
+    }
+  },
+  {
+    "id": "en-m1-tfsa-room",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "How much TFSA room do I have?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "explain_item"
+      ]
+    }
+  },
+  {
+    "id": "en-m1-resp-catchup",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "I haven't opened an RESP for my kids yet. Did I miss the government money?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "explain_item"
+      ]
+    }
+  },
+  {
+    "id": "en-m1-fhsa",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "Should I open an FHSA now or wait until I'm ready to buy?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "explain_item"
+      ]
+    }
+  },
+  {
+    "id": "en-m1-onboarding",
+    "language": "en",
+    "profile": {},
+    "question": "Hi",
+    "expect": {
+      "tools_called": [
+        "next_questions"
+      ]
+    }
+  },
+  {
+    "id": "en-m1-refuse-etf",
+    "language": "en",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "Which ETF should I put in my TFSA?",
+    "expect": {
+      "must_refuse": true,
+      "tools_called": []
+    }
+  },
+  {
+    "id": "hi-m1-tfsa",
+    "language": "hi",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "मेरे पास TFSA में कितना रूम है?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "explain_item"
+      ],
+      "reply_language": "hi",
+      "reply_script": "Deva"
+    }
+  },
+  {
+    "id": "pa-m1-resp",
+    "language": "pa",
+    "profile": {
+      "province": "ON",
+      "status": "permanent_resident",
+      "age": 34,
+      "arrivalYear": 2024,
+      "maritalStatus": "married",
+      "children": [
+        {
+          "age": 6,
+          "hasResp": false
+        },
+        {
+          "age": 3,
+          "hasResp": false
+        }
+      ],
+      "householdIncomeBand": "60k_90k",
+      "incomeBand": "60k_90k",
+      "firstTimeHomeBuyer": true,
+      "hasTfsa": false,
+      "hasFhsa": false,
+      "housing": "rent",
+      "filedTaxesLastYear": true,
+      "hasEmploymentIncome": true
+    },
+    "question": "ਮੇਰੇ ਬੱਚਿਆਂ ਦੇ RESP ਬਾਰੇ ਦੱਸੋ, ਕੀ ਸਰਕਾਰੀ ਪੈਸਾ ਹਾਲੇ ਵੀ ਮਿਲ ਸਕਦਾ ਹੈ?",
+    "expect": {
+      "must_not_state_numbers_without_lookup": true,
+      "must_include_citation": true,
+      "tools_called": [
+        "explain_item"
+      ],
+      "reply_language": "pa",
+      "reply_script": "Guru"
+    }
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "id": "resp_cesg",
+  "name": "RESP and Canada Education Savings Grant",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "family",
+    "newcomer"
+  ],
+  "apply_url": "https://www.canada.ca/en/services/benefits/education/education-savings.html",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "children"
+  ],
+  "rules": [
+    {
+      "if": {
+        "children": {
+          "len": 0
+        }
+      },
+      "then": "not_eligible",
+      "reason": "no_children"
+    },
+    {
+      "if": {
+        "children": {
+          "any": {
+            "age": {
+              "lt": 18
+            },
+            "hasResp": false
+          }
+        }
+      },
+      "then": "eligible",
+      "reason": "child_under_18_no_resp"
+    },
+    {
+      "if": {
+        "children": {
+          "any": {
+            "age": {
+              "lt": 18
+            }
+          }
+        }
+      },
+      "then": "eligible",
+      "reason": "child_under_18"
+    },
+    {
+      "default": "not_eligible",
+      "reason": "children_over_17"
+    }
+  ],
+  "fact_keys": [
+    "cesg_match_rate",
+    "cesg_annual_max",
+    "cesg_lifetime_max",
+    "cesg_annual_contribution_for_max"
+  ],
+  "plan_item": {
+    "title_key": "plan.resp_cesg.title",
+    "action_key": "plan.resp_cesg.action",
+    "deadline": null
+  },
+  "estimate": "cesg",
+  "roadmap_tier": 2,
+  "calculator": "resp_catch_up"
+}

@@ -1,0 +1,93 @@
+{
+  "id": "ccb",
+  "name": "Canada Child Benefit",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "family",
+    "newcomer"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "children",
+    "status"
+  ],
+  "rules": [
+    {
+      "if": {
+        "children": {
+          "len": 0
+        }
+      },
+      "then": "not_eligible",
+      "reason": "no_children"
+    },
+    {
+      "if": {
+        "children": {
+          "none": {
+            "age": {
+              "lt": 18
+            }
+          }
+        }
+      },
+      "then": "not_eligible",
+      "reason": "children_over_17"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "refugee_claimant"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "refugee_claimant_not_yet"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "work_permit",
+            "study_permit"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "temporary_resident_18_month_rule"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "permanent_resident",
+            "protected_person"
+          ]
+        },
+        "filedTaxesLastYear": false
+      },
+      "then": "likely",
+      "reason": "newcomer_apply_rc66"
+    },
+    {
+      "default": "eligible",
+      "reason": "child_under_18"
+    }
+  ],
+  "fact_keys": [
+    "ccb_max_under_6",
+    "ccb_max_6_to_17",
+    "ccb_full_benefit_income_threshold"
+  ],
+  "plan_item": {
+    "title_key": "plan.ccb.title",
+    "action_key": "plan.ccb.action",
+    "deadline": null
+  },
+  "estimate": "ccb",
+  "roadmap_tier": 1
+}

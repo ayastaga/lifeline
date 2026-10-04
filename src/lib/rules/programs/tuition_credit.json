@@ -1,0 +1,45 @@
+{
+  "id": "tuition_credit",
+  "name": "Tuition tax credit (T2202)",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "student"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-32300-your-tuition-education-textbook-amounts.html",
+  "kind": "credit",
+  "verify": true,
+  "requires": [
+    "isStudent",
+    "tuitionPaidThisYear"
+  ],
+  "rules": [
+    {
+      "if": {
+        "isStudent": false
+      },
+      "then": "not_eligible",
+      "reason": "not_a_student"
+    },
+    {
+      "if": {
+        "tuitionPaidThisYear": false
+      },
+      "then": "not_eligible",
+      "reason": "no_tuition_paid"
+    },
+    {
+      "default": "eligible",
+      "reason": "claim_t2202"
+    }
+  ],
+  "fact_keys": [
+    "fed_lowest_rate"
+  ],
+  "plan_item": {
+    "title_key": "plan.tuition_credit.title",
+    "action_key": "plan.tuition_credit.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "roadmap_tier": 2
+}

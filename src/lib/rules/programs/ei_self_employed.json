@@ -1,0 +1,49 @@
+{
+  "id": "ei_self_employed",
+  "name": "EI special benefits for self-employed people",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/services/benefits/ei/ei-self-employed-workers.html",
+  "kind": "info",
+  "verify": true,
+  "requires": [
+    "selfEmployed"
+  ],
+  "rules": [
+    {
+      "if": {
+        "selfEmployed": false
+      },
+      "then": "not_eligible",
+      "reason": "not_self_employed"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "work_permit",
+            "study_permit",
+            "refugee_claimant"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "citizen_or_pr_only"
+    },
+    {
+      "default": "likely",
+      "reason": "opt_in_required"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.ei_self_employed.title",
+    "action_key": "plan.ei_self_employed.action",
+    "deadline": null
+  },
+  "verify_note": "Plan says verify. Confirm status requirement.",
+  "roadmap_tier": 3
+}

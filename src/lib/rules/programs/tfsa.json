@@ -1,0 +1,49 @@
+{
+  "id": "tfsa",
+  "name": "Tax-Free Savings Account (TFSA)",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/before.html",
+  "kind": "account",
+  "verify": true,
+  "roadmap_tier": 3,
+  "requires": [
+    "age"
+  ],
+  "rules": [
+    {
+      "if": {
+        "age": {
+          "lt": 18
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "hasTfsa": true
+      },
+      "then": "eligible",
+      "reason": "tfsa_has_room_check_cra"
+    },
+    {
+      "default": "eligible",
+      "reason": "tfsa_room_accumulates_unused"
+    }
+  ],
+  "fact_keys": [
+    "tfsa_dollar_limits",
+    "tfsa_min_age",
+    "tfsa_newcomer_rule",
+    "tfsa_withdrawal_rule"
+  ],
+  "calculator": "tfsa_room",
+  "plan_item": {
+    "title_key": "plan.tfsa.title",
+    "action_key": "plan.tfsa.action",
+    "deadline": null
+  },
+  "verify_note": "Rules checked against CRA \"Before you contribute\" (2026-10-04). Human review pending."
+}

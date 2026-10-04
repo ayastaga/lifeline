@@ -1,0 +1,50 @@
+{
+  "id": "first_tax_return",
+  "name": "File your first Canadian tax return",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "newcomer",
+    "student"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/newcomers-canada-immigrants.html",
+  "kind": "obligation",
+  "verify": true,
+  "requires": [
+    "status",
+    "filedTaxesLastYear"
+  ],
+  "rules": [
+    {
+      "if": {
+        "filedTaxesLastYear": true
+      },
+      "then": "not_eligible",
+      "reason": "already_filing"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "citizen"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "file_to_get_benefits"
+    },
+    {
+      "default": "eligible",
+      "reason": "file_first_return_to_unlock_benefits"
+    }
+  ],
+  "fact_keys": [
+    "tax_filing_deadline"
+  ],
+  "plan_item": {
+    "title_key": "plan.first_tax_return.title",
+    "action_key": "plan.first_tax_return.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "roadmap_tier": 1
+}

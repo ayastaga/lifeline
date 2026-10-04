@@ -1,0 +1,42 @@
+{
+  "id": "sin_credit_building",
+  "name": "SIN and building a credit history",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "newcomer"
+  ],
+  "apply_url": "https://www.canada.ca/en/employment-social-development/services/sin.html",
+  "kind": "info",
+  "verify": true,
+  "requires": [
+    "status"
+  ],
+  "rules": [
+    {
+      "if": {
+        "status": {
+          "in": [
+            "citizen"
+          ]
+        },
+        "arrivalYear": {
+          "lt": 2020
+        }
+      },
+      "then": "not_eligible",
+      "reason": "not_a_recent_newcomer"
+    },
+    {
+      "default": "eligible",
+      "reason": "informational"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.sin_credit_building.title",
+    "action_key": "plan.sin_credit_building.action",
+    "deadline": null
+  },
+  "roadmap_tier": 4
+}

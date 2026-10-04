@@ -1,0 +1,93 @@
+{
+  "id": "gst_hst_credit",
+  "name": "Canada Groceries and Essentials Benefit (formerly GST/HST credit)",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "student",
+    "newcomer",
+    "family",
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit.html",
+  "kind": "benefit",
+  "verify": true,
+  "requires": [
+    "province",
+    "age",
+    "incomeBand",
+    "filedTaxesLastYear",
+    "status"
+  ],
+  "rules": [
+    {
+      "if": {
+        "age": {
+          "lt": 19
+        },
+        "children": {
+          "len": 0
+        },
+        "maritalStatus": {
+          "in": [
+            "single"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "incomeBand": {
+          "in": [
+            "90k_plus"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "income_too_high"
+    },
+    {
+      "if": {
+        "filedTaxesLastYear": false,
+        "status": {
+          "in": [
+            "work_permit",
+            "study_permit",
+            "permanent_resident",
+            "refugee_claimant",
+            "protected_person"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "newcomer_apply_rc151"
+    },
+    {
+      "if": {
+        "filedTaxesLastYear": false
+      },
+      "then": "likely",
+      "reason": "must_file_return"
+    },
+    {
+      "default": "eligible",
+      "reason": "meets_basic_criteria"
+    }
+  ],
+  "fact_keys": [
+    "cgeb_max_single",
+    "cgeb_max_couple",
+    "cgeb_max_per_child",
+    "gst_credit_payment_months"
+  ],
+  "plan_item": {
+    "title_key": "plan.gst_hst_credit.title",
+    "action_key": "plan.gst_hst_credit.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "estimate": "cgeb",
+  "verify_note": "Renamed CGEB on 2026-07-03; amounts +25% for 2026-2031. Id kept for compatibility.",
+  "roadmap_tier": 1
+}

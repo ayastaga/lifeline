@@ -1,0 +1,51 @@
+{
+  "id": "cpp_self_employed",
+  "name": "CPP contributions on self-employment income",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html",
+  "kind": "obligation",
+  "verify": true,
+  "requires": [
+    "selfEmployed"
+  ],
+  "rules": [
+    {
+      "if": {
+        "selfEmployed": false
+      },
+      "then": "not_eligible",
+      "reason": "not_self_employed"
+    },
+    {
+      "if": {
+        "selfEmploymentRevenueBand": {
+          "in": [
+            "under_20k"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "contributions_above_basic_exemption"
+    },
+    {
+      "default": "eligible",
+      "reason": "cpp_on_net_self_employment"
+    }
+  ],
+  "fact_keys": [
+    "cpp_self_employed_rate",
+    "cpp_basic_exemption",
+    "cpp_ympe",
+    "cpp_self_employed_max"
+  ],
+  "plan_item": {
+    "title_key": "plan.cpp_self_employed.title",
+    "action_key": "plan.cpp_self_employed.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "roadmap_tier": 2
+}

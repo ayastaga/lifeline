@@ -1,0 +1,61 @@
+{
+  "id": "osap",
+  "name": "OSAP (Ontario Student Assistance Program)",
+  "level": "provincial",
+  "jurisdiction": "ON",
+  "personas": [
+    "student"
+  ],
+  "apply_url": "https://www.ontario.ca/page/osap-ontario-student-assistance-program",
+  "kind": "info",
+  "verify": true,
+  "requires": [
+    "province",
+    "isStudent",
+    "status"
+  ],
+  "rules": [
+    {
+      "if": {
+        "province": {
+          "ne": "ON"
+        }
+      },
+      "then": "not_eligible",
+      "reason": "not_ontario_resident"
+    },
+    {
+      "if": {
+        "isStudent": false
+      },
+      "then": "not_eligible",
+      "reason": "not_a_student"
+    },
+    {
+      "if": {
+        "status": {
+          "in": [
+            "study_permit",
+            "work_permit",
+            "refugee_claimant",
+            "other"
+          ]
+        }
+      },
+      "then": "not_eligible",
+      "reason": "osap_residency_status"
+    },
+    {
+      "default": "likely",
+      "reason": "apply_osap"
+    }
+  ],
+  "fact_keys": [],
+  "plan_item": {
+    "title_key": "plan.osap.title",
+    "action_key": "plan.osap.action",
+    "deadline": null
+  },
+  "verify_note": "Confirm status requirement wording on ontario.ca.",
+  "roadmap_tier": 1
+}

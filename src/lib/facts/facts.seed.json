@@ -1,0 +1,788 @@
+[
+  {
+    "key": "cgeb_max_single",
+    "value": 679,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/how-much.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Canada Groceries and Essentials Benefit (formerly GST/HST credit), max for a single individual, July 2026 to June 2027, based on 2025 return."
+  },
+  {
+    "key": "cgeb_max_couple",
+    "value": 890,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/how-much.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max if married or common-law, July 2026 to June 2027."
+  },
+  {
+    "key": "cgeb_max_per_child",
+    "value": 234,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/how-much.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max per eligible child under 19, July 2026 to June 2027."
+  },
+  {
+    "key": "gst_credit_payment_months",
+    "value": 4,
+    "unit": "count",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Payments per year (quarterly). Key name kept for compatibility."
+  },
+  {
+    "key": "gst_credit_income_cutoff_single",
+    "value": null,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-groceries-essentials-benefit/who-eligible.html",
+    "last_checked": null,
+    "source_quality": null,
+    "verified": false,
+    "note": "VERIFY: income where the CGEB reaches zero for a single person, July 2026 to June 2027. Not found on an official page yet."
+  },
+  {
+    "key": "ccb_max_under_6",
+    "value": 8157,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max per child under 6, July 2026 to June 2027 (confirmed in a canada.ca news release, 2026-07-20)."
+  },
+  {
+    "key": "ccb_max_6_to_17",
+    "value": 6883,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max per child aged 6 to 17, July 2026 to June 2027."
+  },
+  {
+    "key": "ccb_full_benefit_income_threshold",
+    "value": 38237,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Adjusted family net income (2025) below which the full CCB is paid. Seen in news coverage; confirm on the CRA how-much page."
+  },
+  {
+    "key": "ocb_max_monthly_per_child",
+    "value": 146.66,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.ontario.ca/page/ontario-child-benefit",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Ontario Child Benefit max per child per month from July 2026. Secondary source only; confirm on ontario.ca."
+  },
+  {
+    "key": "ostc_max",
+    "value": 378,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.ontario.ca/page/ontario-trillium-benefit",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Ontario Sales Tax Credit max per person from July 2026. Secondary source only."
+  },
+  {
+    "key": "oeptc_rent_occupancy_share",
+    "value": 20,
+    "unit": "percent",
+    "effective_year": 2026,
+    "source_url": "https://www.ontario.ca/page/ontario-trillium-benefit",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: share of rent treated as property tax (occupancy cost) for the OEPTC."
+  },
+  {
+    "key": "oeptc_max_18_to_64",
+    "value": null,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.ontario.ca/page/ontario-trillium-benefit",
+    "last_checked": null,
+    "source_quality": null,
+    "verified": false,
+    "note": "VERIFY: OEPTC max for people aged 18 to 64, July 2026 to June 2027."
+  },
+  {
+    "key": "cwb_max_single",
+    "value": 1665,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-workers-benefit.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Canada Workers Benefit basic max, single, 2026 tax year (CRA indexation figures as reported)."
+  },
+  {
+    "key": "cwb_max_family",
+    "value": 2869,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-workers-benefit.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Canada Workers Benefit basic max, family, 2026 tax year."
+  },
+  {
+    "key": "cesg_match_rate",
+    "value": 20,
+    "unit": "percent",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Basic CESG rate on annual contributions."
+  },
+  {
+    "key": "cesg_annual_contribution_for_max",
+    "value": 2500,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Annual contribution that earns the full basic grant."
+  },
+  {
+    "key": "cesg_annual_max",
+    "value": 500,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max basic CESG per child per year, without carry-forward."
+  },
+  {
+    "key": "cesg_annual_max_with_carry_forward",
+    "value": 1000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/services/student-financial-aid/education-savings/resp/resp-promoters/infocapsules/grant-room.html",
+    "last_checked": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max basic CESG per year when there is unused grant room.",
+    "quote": "the annual limit of Basic CESG is $500 or $1,000 with carry forward",
+    "retrieved_at": "2026-10-04"
+  },
+  {
+    "key": "cesg_lifetime_max",
+    "value": 7200,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Lifetime CESG max per child (basic + additional).",
+    "quote": "The maximum that can be received from the CESG is $7,200 until the age of 17 per eligible beneficiary.",
+    "retrieved_at": "2026-10-04"
+  },
+  {
+    "key": "clb_first_payment",
+    "value": 500,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Canada Learning Bond first-year amount.",
+    "quote": "they could receive $500 the first year in an RESP, and then another $100 each eligible year after that until the age of 15, up to a lifetime maximum of $2,000",
+    "retrieved_at": "2026-10-04"
+  },
+  {
+    "key": "clb_annual_payment",
+    "value": 100,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Canada Learning Bond amount for each later eligible year.",
+    "quote": "and then another $100 each eligible year after that until the age of 15",
+    "retrieved_at": "2026-10-04"
+  },
+  {
+    "key": "clb_lifetime_max",
+    "value": 2000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/services/benefits/education/education-savings/savings-grant.html",
+    "last_checked": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Canada Learning Bond lifetime max.",
+    "quote": "up to a lifetime maximum of $2,000",
+    "retrieved_at": "2026-10-04"
+  },
+  {
+    "key": "hst_small_supplier_threshold",
+    "value": 30000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/when-register-charge.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Small supplier threshold: over this in one calendar quarter, or over four consecutive quarters. Taxi and ride-share drivers must register regardless."
+  },
+  {
+    "key": "tax_filing_deadline",
+    "value": "2027-04-30",
+    "unit": "date",
+    "effective_year": 2027,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/filing-deadline.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: filing and payment deadline for 2026 returns."
+  },
+  {
+    "key": "self_employed_filing_deadline",
+    "value": "2027-06-15",
+    "unit": "date",
+    "effective_year": 2027,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/personal-income/filing-deadline.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: filing deadline for self-employed (any balance owing is still due by the general deadline)."
+  },
+  {
+    "key": "cpp_basic_exemption",
+    "value": 3500,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Year's basic exemption."
+  },
+  {
+    "key": "cpp_ympe",
+    "value": 74600,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Year's maximum pensionable earnings."
+  },
+  {
+    "key": "cpp_yampe",
+    "value": 85000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Year's additional maximum pensionable earnings (CPP2 ceiling)."
+  },
+  {
+    "key": "cpp_self_employed_rate",
+    "value": 11.9,
+    "unit": "percent",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Base + first additional CPP, self-employed."
+  },
+  {
+    "key": "cpp2_self_employed_rate",
+    "value": 8,
+    "unit": "percent",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Second additional CPP (CPP2), self-employed."
+  },
+  {
+    "key": "cpp_self_employed_max",
+    "value": 8460.9,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max self-employed base CPP contribution."
+  },
+  {
+    "key": "cpp2_self_employed_max",
+    "value": 832,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-july-september.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Max self-employed CPP2 contribution."
+  },
+  {
+    "key": "fed_tax_brackets",
+    "value": [
+      [
+        58523,
+        14
+      ],
+      [
+        117045,
+        20.5
+      ],
+      [
+        181440,
+        26
+      ],
+      [
+        258482,
+        29
+      ],
+      [
+        null,
+        33
+      ]
+    ],
+    "unit": "brackets",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4032-payroll-deductions-tables/t4032on-jan/t4032on-january-general-information.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "[upper bound, rate %]. Lowest rate 14% confirmed on canada.ca; thresholds from accounting-firm tables."
+  },
+  {
+    "key": "fed_basic_personal_amount",
+    "value": 16452,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4032-payroll-deductions-tables/t4032on-jan/t4032on-january-general-information.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Max federal BPA (reduced above the 26% bracket; the calculator ignores the reduction)."
+  },
+  {
+    "key": "fed_lowest_rate",
+    "value": 14,
+    "unit": "percent",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4032-payroll-deductions-tables/t4032on-jan/t4032on-january-general-information.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "official",
+    "verified": false,
+    "note": "Lowest federal rate; also the rate for most federal non-refundable credits (tuition, student loan interest)."
+  },
+  {
+    "key": "on_tax_brackets",
+    "value": [
+      [
+        53891,
+        5.05
+      ],
+      [
+        107785,
+        9.15
+      ],
+      [
+        150000,
+        11.16
+      ],
+      [
+        220000,
+        12.16
+      ],
+      [
+        null,
+        13.16
+      ]
+    ],
+    "unit": "brackets",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4032-payroll-deductions-tables/t4032on-jan/t4032on-january-general-information.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: Ontario 2026 thresholds (first two are indexed; 150k and 220k are not)."
+  },
+  {
+    "key": "on_basic_personal_amount",
+    "value": 12989,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4032-payroll-deductions-tables/t4032on-jan/t4032on-january-general-information.html",
+    "last_checked": "2026-10-03",
+    "source_quality": "secondary",
+    "verified": false,
+    "note": "Ontario BPA 2026 (accounting-firm table)."
+  },
+  {
+    "key": "canada_training_credit_annual",
+    "value": 250,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-training-credit.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: room added per eligible year."
+  },
+  {
+    "key": "canada_training_credit_lifetime",
+    "value": 5000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-training-credit.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: lifetime limit."
+  },
+  {
+    "key": "canada_training_credit_min_age",
+    "value": 26,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-training-credit.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: room accumulates from this age."
+  },
+  {
+    "key": "canada_training_credit_max_age",
+    "value": 65,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-training-credit.html",
+    "last_checked": null,
+    "source_quality": "knowledge",
+    "verified": false,
+    "note": "VERIFY: upper age for accumulating room."
+  },
+  {
+    "key": "tfsa_dollar_limits",
+    "value": [
+      [
+        2009,
+        5000
+      ],
+      [
+        2010,
+        5000
+      ],
+      [
+        2011,
+        5000
+      ],
+      [
+        2012,
+        5000
+      ],
+      [
+        2013,
+        5500
+      ],
+      [
+        2014,
+        5500
+      ],
+      [
+        2015,
+        10000
+      ],
+      [
+        2016,
+        5500
+      ],
+      [
+        2017,
+        5500
+      ],
+      [
+        2018,
+        5500
+      ],
+      [
+        2019,
+        6000
+      ],
+      [
+        2020,
+        6000
+      ],
+      [
+        2021,
+        6000
+      ],
+      [
+        2022,
+        6000
+      ],
+      [
+        2023,
+        6500
+      ],
+      [
+        2024,
+        7000
+      ],
+      [
+        2025,
+        7000
+      ],
+      [
+        2026,
+        7000
+      ]
+    ],
+    "unit": "table",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/before.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "2009 to 2012 $5,000; 2013 and 2014 $5,500; 2015 $10,000; 2016 to 2018 $5,500; 2019 to 2022 $6,000; 2023 $6,500; 2024 to 2026 $7,000",
+    "review_trigger": "tax_year_change",
+    "note": "[year, annual TFSA dollar limit]. Add the new year every January."
+  },
+  {
+    "key": "tfsa_min_age",
+    "value": 18,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/before.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "your contribution room starts to accumulate when you turn 18 years of age",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "tfsa_newcomer_rule",
+    "value": 1,
+    "unit": "flag",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/before.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "If you are a new resident of Canada, you start to accumulate contribution room on the day you have residency if you are 18 years of age or older.",
+    "review_trigger": "on_page_change",
+    "note": "Rule flag: room only for years you were a resident; the year of residency gets that year's full dollar limit (CRA example: resident in 2024 -> $7,000 room)."
+  },
+  {
+    "key": "tfsa_withdrawal_rule",
+    "value": 1,
+    "unit": "flag",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/before.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "Any amount you withdraw from your TFSA during the year will be added back as available contribution room the next calendar year on January 1.",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "fhsa_annual_limit",
+    "value": 8000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/department-finance/news/2022/08/design-of-the-tax-free-first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "The lifetime limit on contributions would be $40,000, with an annual contribution limit of $8,000.",
+    "review_trigger": "on_page_change",
+    "note": "Finance Canada design page (2022). Confirm against the current CRA FHSA page."
+  },
+  {
+    "key": "fhsa_lifetime_limit",
+    "value": 40000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/department-finance/news/2022/08/design-of-the-tax-free-first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "The lifetime limit on contributions would be $40,000",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "fhsa_carry_forward_max",
+    "value": 8000,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/department-finance/news/2022/08/design-of-the-tax-free-first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "carry forward unused portions of their annual contribution limit up to a maximum of $8,000",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "fhsa_room_starts_when_opened",
+    "value": 1,
+    "unit": "flag",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/department-finance/news/2022/08/design-of-the-tax-free-first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "Carry-forward amounts would only start accumulating after an individual opens an FHSA for the first time.",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "fhsa_first_time_buyer_lookback_years",
+    "value": 4,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/department-finance/news/2022/08/design-of-the-tax-free-first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "have not owned a home in which they lived at any time during the part of the calendar year before the account is opened or at any time in the preceding four calendar years",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "fhsa_min_age",
+    "value": 18,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "secondary",
+    "verified": false,
+    "quote": "Canadian residents 18 years or older but not more than 71 years on December 31 of the year you open an FHSA",
+    "review_trigger": "on_page_change",
+    "note": "Quote seen on a bank page (tier 2); confirm on the CRA FHSA page."
+  },
+  {
+    "key": "fhsa_max_age",
+    "value": 71,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "secondary",
+    "verified": false,
+    "quote": "not more than 71 years on December 31 of the year you open an FHSA",
+    "review_trigger": "on_page_change",
+    "note": "Confirm on the CRA FHSA page."
+  },
+  {
+    "key": "cesg_annual_room",
+    "value": 500,
+    "unit": "cad",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-education-savings-plans-resps/canada-education-savings-programs-cesp/canada-education-savings-grant-cesg.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "Every child under age 18 who is a resident of Canada will accumulate $400 (for 1998 to 2006) and $500 (from 2007 and subsequent years) of unused CESG room.",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "cesg_room_requires_residency",
+    "value": 1,
+    "unit": "flag",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-education-savings-plans-resps/canada-education-savings-programs-cesp/canada-education-savings-grant-cesg.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "Every child under age 18 who is a resident of Canada will accumulate",
+    "review_trigger": "on_page_change",
+    "note": "Newcomer children accumulate room only from the year they became residents."
+  },
+  {
+    "key": "cesg_last_age",
+    "value": 17,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-education-savings-plans-resps/canada-education-savings-programs-cesp/canada-education-savings-grant-cesg.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "Beneficiaries qualify for a grant on the contributions made on their behalf up to the end of the calendar year in which they turn 17 years of age.",
+    "review_trigger": "on_page_change",
+    "note": null
+  },
+  {
+    "key": "cesg_age_16_17_cutoff_age",
+    "value": 15,
+    "unit": "years",
+    "effective_year": 2026,
+    "source_url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/registered-education-savings-plans-resps/canada-education-savings-programs-cesp/canada-education-savings-grant-cesg.html",
+    "last_checked": "2026-10-04",
+    "retrieved_at": "2026-10-04",
+    "source_quality": "official",
+    "verified": false,
+    "quote": "you must start to save in RESPs for your child before the end of the calendar year in which your child turns 15 years of age in order for the child to be eligible to receive the CESG",
+    "review_trigger": "on_page_change",
+    "note": null
+  }
+]

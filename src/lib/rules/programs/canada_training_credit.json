@@ -1,0 +1,72 @@
+{
+  "id": "canada_training_credit",
+  "name": "Canada Training Credit",
+  "level": "federal",
+  "jurisdiction": "CA",
+  "personas": [
+    "student",
+    "gig"
+  ],
+  "apply_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-training-credit.html",
+  "kind": "credit",
+  "verify": true,
+  "requires": [
+    "age",
+    "incomeBand"
+  ],
+  "rules": [
+    {
+      "if": {
+        "age": {
+          "lt": 26
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "age": {
+          "gt": 66
+        }
+      },
+      "then": "not_eligible",
+      "reason": "age_requirement"
+    },
+    {
+      "if": {
+        "incomeBand": {
+          "in": [
+            "under_20k"
+          ]
+        }
+      },
+      "then": "likely",
+      "reason": "min_earnings_needed"
+    },
+    {
+      "if": {
+        "filedTaxesLastYear": false
+      },
+      "then": "likely",
+      "reason": "must_file_return"
+    },
+    {
+      "default": "eligible",
+      "reason": "room_accumulates"
+    }
+  ],
+  "fact_keys": [
+    "canada_training_credit_annual",
+    "canada_training_credit_lifetime",
+    "canada_training_credit_min_age",
+    "canada_training_credit_max_age"
+  ],
+  "plan_item": {
+    "title_key": "plan.canada_training_credit.title",
+    "action_key": "plan.canada_training_credit.action",
+    "deadline": "tax_filing_deadline"
+  },
+  "verify_note": "Plan says verify age rules.",
+  "roadmap_tier": 3
+}
