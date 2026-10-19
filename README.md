@@ -1,3 +1,4 @@
+<img width="960" height="540" alt="lifeline-promo" src="https://github.com/user-attachments/assets/fa7dbdd7-2cae-47e7-8e0f-e190e5f1acc4" />
 # Lifeline — Multilingual Financial Assistant
 
 A financial assistant that works _with_ you. Tell it your situation (student, newcomer, family, gig worker), optionally upload a bank statement, and ask about benefits, credits, taxes and money basics in 8 languages: English, French, Mandarin, Hindi, Urdu, Punjabi (Gurmukhi and Shahmukhi), Arabic, Spanish.
